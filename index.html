@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="theme-color" content="#1b0b12">
+  <title>Sabry ♥ Shaza</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+  <div id="hearts"></div>
+
+  <main id="lockScreen" class="lock-screen">
+    <div class="photo-overlay"></div>
+    <section class="lock-card">
+      <div class="tiny-heart">♥</div>
+      <p class="eyebrow">A little place made with love</p>
+      <h1>أول الحكاية ♥</h1>
+      <p class="intro">اكتبي اسم حبيبك علشان نبدأ الحكاية...</p>
+
+      <div class="input-wrap">
+        <input id="nameInput" type="text" autocomplete="off" placeholder="اكتبي اسم حبيبك">
+      </div>
+      <button id="enterBtn" class="main-btn">ابدئي الحكاية ♥</button>
+      <p id="errorMsg" class="error"></p>
+      <div class="hint">Hint: اكتبي الاسم اللي يبدأ بيه كل شيء ✨</div>
+    </section>
+  </main>
+
+  <main id="site" class="site hidden">
+    <header class="hero">
+      <div class="hero-glow"></div>
+      <span class="pill">♥ S & S ♥</span>
+      <h1>أهلًا بيكي يا شذا</h1>
+      <p>من هنا تبدأ حكاية صغيرة... بس جواها مشاعر كتير جدًا.</p>
+      <div class="scroll-note">انزلي براحتك... لسه في حاجات كتير ♥</div>
+    </header>
+
+    <section class="section">
+      <div class="section-title">
+        <span>01</span>
+        <h2>حاجات نفسي أقولها لك</h2>
+      </div>
+
+      <div class="cards">
+        <button class="love-card" data-modal="love">
+          <span class="icon">♥</span>
+          <b>بحبك أوي أوي</b>
+          <small>اضغطي هنا</small>
+        </button>
+        <button class="love-card" data-modal="tiktok">
+          <span class="icon">😂</span>
+          <b>تيك توك علي الله حكايته</b>
+          <small>اضغطي وشوفي الحكاية</small>
+        </button>
+        <button class="love-card" data-modal="forever">
+          <span class="icon">∞</span>
+          <b>إنتِ غالية عندي</b>
+          <small>مش كلام وخلاص</small>
+        </button>
+        <button class="love-card" data-modal="secret">
+          <span class="icon">🔐</span>
+          <b>سر صغير</b>
+          <small>ممنوع حد يعرفه</small>
+        </button>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="quote-mark">“</div>
+      <p>بعض الناس بنقابلهم صدفة... وبعدها نكتشف إن وجودهم كان أحلى حاجة حصلت لنا.</p>
+      <span>— من الحكاية دي ♥</span>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <span>02</span>
+        <h2>اختاري حاجة نعملها</h2>
+      </div>
+
+      <div class="button-grid">
+        <button class="action-btn" data-modal="letter">💌 جواب ليكي</button>
+        <button class="action-btn" data-modal="reasons">🌷 ليه بحبك؟</button>
+        <button class="action-btn" data-modal="memories">📸 ذكرياتنا</button>
+        <button class="action-btn" data-modal="promise">🤝 وعد مني</button>
+        <button class="action-btn" data-modal="night">🌙 رسالة آخر الليل</button>
+        <button class="action-btn" data-modal="future">✨ بكرة بتاعنا</button>
+      </div>
+    </section>
+
+    <section class="game-section">
+      <div class="game-card">
+        <span class="game-badge">🎮 لعبة صغيرة</span>
+        <h2>مين يعرف التاني أكتر؟</h2>
+        <p>جاوبي على 5 أسئلة وشوفي النتيجة في الآخر.</p>
+        <button id="startGame" class="main-btn">يلا نلعب ♥</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <span>03</span>
+        <h2>مساحتنا الخاصة</h2>
+      </div>
+
+      <div class="special-grid">
+        <button class="special-card" data-modal="video">
+          <span>🎬</span>
+          <b>فيديوهات حب</b>
+          <small>هنا هنحط الفيديوهات اللي تحبيها</small>
+        </button>
+        <button class="special-card" data-modal="music">
+          <span>🎵</span>
+          <b>أول الحكايات</b>
+          <small>الأغنية اللي بدأت معاها الحكاية</small>
+        </button>
+        <button class="special-card" data-modal="photos">
+          <span>🖼️</span>
+          <b>ألبوم الصور</b>
+          <small>مكان لصورنا وذكرياتنا</small>
+        </button>
+      </div>
+    </section>
+
+    <section class="ending">
+      <div class="ending-heart">♥</div>
+      <h2>وده لسه أول الحكاية...</h2>
+      <p>كل ما نفتكر حاجة حلوة، نضيفها هنا.</p>
+      <button class="outline-btn" id="topBtn">ارجعي لأول الحكاية ↑</button>
+    </section>
+
+    <footer>Made with a lot of care ♥</footer>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <article class="modal-box">
+      <button id="closeModal" class="close-btn">×</button>
+      <div id="modalContent"></div>
+    </article>
+  </div>
+
+  <div id="gameModal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <article class="modal-box game-box">
+      <button id="closeGame" class="close-btn">×</button>
+      <div id="gameContent"></div>
+    </article>
+  </div>
+
+  <audio id="loveSong" src="song.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
