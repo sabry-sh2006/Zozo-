@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Sabry ♥ Zozo</title>
+
+<style>
+
+/* =========================
+   الأساس
+========================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:
+    Arial,
+    Tahoma,
+    sans-serif;
+
+    color:white;
+
+    min-height:100vh;
+
+    background-image:
+    linear-gradient(
+        rgba(10,3,8,.72),
+        rgba(10,3,8,.82)
+    ),
+    url("background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+    overflow-x:hidden;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+}
+
+
+/* =========================
+   شاشة الدخول
+========================= */
+
+#loginScreen{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    background:
+    rgba(0,0,0,.25);
+}
+
+.loginBox{
+
+    width:min(430px,100%);
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    border:
+    1px solid
+    rgba(255,255,255,.2);
+
+    backdrop-filter:
+    blur(15px);
+
+    box-shadow:
+    0 25px 80px
+    rgba(0,0,0,.5);
+}
+
+.loginHeart{
+
+    font-size:65px;
+
+    color:#ff6f9f;
+
+    margin-bottom:10px;
+}
+
+.loginBox h1{
+
+    font-size:40px;
+
+    margin-bottom:15px;
+}
+
+.loginBox p{
+
+    color:#eadce2;
+
+    line-height:2;
+
+    margin-bottom:20px;
+}
+
+#nameInput{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:16px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.2);
+
+    background:
+    rgba(0,0,0,.25);
+
+    color:white;
+
+    outline:none;
+
+    text-align:center;
+
+    font-size:16px;
+}
+
+#nameInput::placeholder{
+    color:#cbbbc3;
+}
+
+.startButton{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:15px;
+
+    border:0;
+
+    border-radius:16px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff4f8b,
+        #c92e62
+    );
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    box-shadow:
+    0 10px 30px
+    rgba(255,70,130,.25);
+}
+
+#error{
+
+    min-height:25px;
+
+    margin-top:10px;
+
+    color:#ff9ab8;
+}
+
+
+/* =========================
+   الموقع
+========================= */
+
+#website{
+    min-height:100vh;
+}
+
+.hero{
+
+    min-height:85vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    background:
+    linear-gradient(
+        rgba(20,5,12,.2),
+        rgba(20,5,12,.55)
+    );
+}
+
+.heroHeart{
+
+    font-size:55px;
+
+    color:#ff6f9f;
+
+    animation:
+    heartbeat 1.8s infinite;
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.12);
+    }
+}
+
+.hero h1{
+
+    font-size:
+    clamp(
+        45px,
+        12vw,
+        85px
+    );
+
+    margin:15px 0;
+
+    text-shadow:
+    0 8px 30px
+    rgba(0,0,0,.5);
+}
+
+.hero p{
+
+    max-width:700px;
+
+    color:#eee0e6;
+
+    line-height:2.2;
+
+    font-size:18px;
+}
+
+
+/* =========================
+   الأقسام
+========================= */
+
+.section{
+
+    width:min(1000px,92%);
+
+    margin:auto;
+
+    padding:65px 0;
+}
+
+.sectionTitle{
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:16px;
+}
+
+
+/* =========================
+   الكروت
+========================= */
+
+.card{
+
+    min-height:120px;
+
+    padding:25px;
+
+    border-radius:24px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.14);
+
+    background:
+    rgba(255,255,255,.07);
+
+    color:white;
+
+    text-align:right;
+
+    transition:.25s;
+
+    backdrop-filter:
+    blur(8px);
+}
+
+.card:hover{
+
+    transform:
+    translateY(-5px);
+
+    border-color:
+    #ff6f9f;
+
+    background:
+    rgba(255,111,159,.13);
+}
+
+.cardIcon{
+
+    display:block;
+
+    font-size:35px;
+
+    margin-bottom:12px;
+}
+
+.cardTitle{
+
+    font-size:18px;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   الاقتباس
+========================= */
+
+.quote{
+
+    width:min(850px,90%);
+
+    margin:auto;
+
+    padding:45px 25px;
+
+    text-align:center;
+
+    border-top:
+    1px solid
+    rgba(255,255,255,.14);
+
+    border-bottom:
+    1px solid
+    rgba(255,255,255,.14);
+
+    color:#f1e4e9;
+
+    line-height:2.3;
+
+    font-size:20px;
+}
+
+
+/* =========================
+   القسم الخاص
+========================= */
+
+.specialGrid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:16px;
+}
+
+.specialButton{
+
+    padding:30px 15px;
+
+    border-radius:24px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.14);
+
+    background:
+    rgba(255,255,255,.07);
+
+    color:white;
+
+    font-size:17px;
+
+    transition:.25s;
+}
+
+.specialButton:hover{
+
+    transform:
+    translateY(-5px);
+
+    border-color:#ff6f9f;
+}
+
+.specialIcon{
+
+    display:block;
+
+    font-size:45px;
+
+    margin-bottom:12px;
+}
+
+
+/* =========================
+   النافذة
+========================= */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:15px;
+}
+
+.modal.hidden{
+    display:none;
+}
+
+.modalBackground{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.82);
+
+    backdrop-filter:
+    blur(8px);
+}
+
+.modalBox{
+
+    position:relative;
+
+    z-index:2;
+
+    width:min(900px,100%);
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    padding:45px 20px 25px;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #321321,
+        #15080e
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.15);
+}
+
+.closeButton{
+
+    position:absolute;
+
+    left:12px;
+
+    top:10px;
+
+    width:38px;
+
+    height:38px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.1);
+
+    color:white;
+
+    font-size:25px;
+}
+
+.modalBox h2{
+
+    margin-bottom:20px;
+
+    font-size:30px;
+}
+
+.text{
+
+    white-space:pre-line;
+
+    line-height:2.3;
+
+    color:#eadde3;
+
+    font-size:17px;
+}
+
+
+/* =========================
+   الفيديوهات
+========================= */
+
+.mediaGrid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:15px;
+}
+
+.mediaCard{
+
+    padding:10px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.06);
+
+    border:
+    1px solid
+    rgba(255,255,255,.13);
+}
+
+.mediaCard video,
+.mediaCard img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:15px;
+}
+
+.mediaCard p{
+
+    text-align:center;
+
+    padding:10px 5px 3px;
+}
+
+
+/* =========================
+   الأغاني
+========================= */
+
+.musicList{
+
+    display:grid;
+
+    gap:14px;
+}
+
+.musicCard{
+
+    padding:18px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.06);
+
+    border:
+    1px solid
+    rgba(255,255,255,.13);
+}
+
+.musicCard b{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    font-size:17px;
+}
+
+.musicCard audio{
+
+    width:100%;
+}
+
+
+/* =========================
+   اللعبة
+========================= */
+
+.gameBox{
+
+    padding:45px 20px;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    background:
+    rgba(255,80,140,.09);
+
+    border:
+    1px solid
+    rgba(255,100,150,.2);
+}
+
+.gameButton{
+
+    margin-top:15px;
+
+    padding:14px 25px;
+
+    border:0;
+
+    border-radius:15px;
+
+    background:#e94378;
+
+    color:white;
+
+    font-weight:bold;
+}
+
+.answers{
+
+    display:grid;
+
+    gap:10px;
+}
+
+.answerButton{
+
+    padding:14px;
+
+    border-radius:15px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.15);
+
+    background:
+    rgba(255,255,255,.06);
+
+    color:white;
+
+    text-align:right;
+}
+
+.answerButton:hover{
+
+    border-color:#ff6f9f;
+}
+
+
+/* =========================
+   النهاية
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:45px 20px;
+
+    color:#9a858e;
+}
+
+
+/* =========================
+   الموبايل
+========================= */
+
+@media(max-width:650px){
+
+    .grid,
+    .mediaGrid,
+    .specialGrid{
+
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+
+        font-size:52px;
+    }
+
+    .sectionTitle{
+
+        font-size:28px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     شاشة الدخول
+====================================================== -->
+
+<div id="loginScreen">
+
+<div class="loginBox">
+
+<div class="loginHeart">
+♥
+</div>
+
+<h1>
+أول الحكاية
+</h1>
+
+<p>
+
+اكتبي اسم حبيبك علشان نبدأ الحكاية...
+
+</p>
+
+<input
+    id="nameInput"
+    type="text"
+    placeholder="اكتبي الاسم"
+>
+
+<button
+    class="startButton"
+    onclick="startWebsite()"
+>
+
+ابدئي الحكاية ♥
+
+</button>
+
+<div id="error"></div>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     الموقع
+====================================================== -->
+
+<div id="website" style="display:none;">
+
+
+<header class="hero">
+
+<div class="heroHeart">
+♥
+</div>
+
+<h1>
+أهلًا بيكي يا شذا
+</h1>
+
+<p>
+
+أنا بحبك أوي يا توتو 🥹♥️
+
+<br>
+
+حياتي اتغيرت من ساعة ما بقيتي معايا
+وبقيتي أحلى حاجة في حياتي ويومي
+وفي كل حاجة ليا.
+
+<br>
+
+بحبببك أوي أوي أوي ♥️
+
+</p>
+
+</header>
+
+
+
+<!-- =====================================================
+     الكلام
+====================================================== -->
+
+<section class="section">
+
+<h2 class="sectionTitle">
+حاجات نفسي أقولها لك
+</h2>
+
+
+<div class="grid">
+
+
+<button
+    class="card"
+    onclick="showText('love')"
+>
+
+<span class="cardIcon">
+♥
+</span>
+
+<span class="cardTitle">
+بحبك أوي أوي
+</span>
+
+</button>
+
+
+
+<!-- تيك توك = الفيديوهات -->
+
+<button
+    class="card"
+    onclick="showVideos()"
+>
+
+<span class="cardIcon">
+😂
+</span>
+
+<span class="cardTitle">
+تيك توك علي الله حكايته
+</span>
+
+</button>
+
+
+
+<button
+    class="card"
+    onclick="showText('important')"
+>
+
+<span class="cardIcon">
+∞
+</span>
+
+<span class="cardTitle">
+إنتِ غالية عندي
+</span>
+
+</button>
+
+
+
+<button
+    class="card"
+    onclick="showText('secret')"
+>
+
+<span class="cardIcon">
+🔐
+</span>
+
+<span class="cardTitle">
+سر صغير
+</span>
+
+</button>
+
+
+</div>
+
+</section>
+
+
+
+<div class="quote">
+
+“بعض الناس بنقابلهم صدفة...
+وبعدها نكتشف إن وجودهم كان أحلى حاجة حصلت لنا.” ♥
+
+</div>
+
+
+
+<!-- =====================================================
+     مساحتنا الخاصة
+====================================================== -->
+
+<section class="section">
+
+<h2 class="sectionTitle">
+مساحتنا الخاصة ♥
+</h2>
+
+
+<div class="specialGrid">
+
+
+<button
+    class="specialButton"
+    onclick="showMusic()"
+>
+
+<span class="specialIcon">
+🎵
+</span>
+
+أول الحكايات
+
+</button>
+
+
+
+<button
+    class="specialButton"
+    onclick="showPhotos()"
+>
+
+<span class="specialIcon">
+🖼️
+</span>
+
+ألبوم الصور
+
+</button>
+
+
+
+<button
+    class="specialButton"
+    onclick="showText('letter')"
+>
+
+<span class="specialIcon">
+💌
+</span>
+
+جواب ليكي
+
+</button>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     اللعبة
+====================================================== -->
+
+<section class="section">
+
+<div class="gameBox">
+
+<h2>
+🎮 مين يعرف التاني أكتر؟
+</h2>
+
+<p style="margin-top:12px;line-height:2;">
+
+جاوبي على شوية أسئلة
+وشوفي النتيجة ♥
+
+</p>
+
+<button
+    class="gameButton"
+    onclick="startGame()"
+>
+
+يلا نلعب ♥
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<section
+    class="section"
+    style="text-align:center;"
+>
+
+<div class="heroHeart">
+♥
+</div>
+
+<h2>
+وده لسه أول الحكاية...
+</h2>
+
+<p style="margin-top:15px;color:#d3c2ca;">
+
+كل ما نفتكر حاجة حلوة،
+نضيفها هنا.
+
+</p>
+
+</section>
+
+
+
+<footer>
+
+Made with love ♥
+<br>
+Sabry & Zozo
+
+</footer>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     Modal
+====================================================== -->
+
+<div
+    id="modal"
+    class="modal hidden"
+>
+
+<div
+    class="modalBackground"
+    onclick="closeModal()"
+></div>
+
+
+<div class="modalBox">
+
+<button
+    class="closeButton"
+    onclick="closeModal()"
+>
+×
+</button>
+
+<div id="modalContent"></div>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   الأغنية الأولى
+====================================================== */
+
+const firstSong =
+new Audio("song.mp3");
+
+firstSong.loop = true;
+
+firstSong.volume = 0.45;
+
+
+/* =====================================================
+   تسجيل الدخول
+====================================================== */
+
+function startWebsite(){
+
+    const name =
+    document
+    .getElementById("nameInput")
+    .value
+    .trim()
+    .toLowerCase();
+
+
+    if(name !== "sabry"){
+
+        document
+        .getElementById("error")
+        .innerText =
+        "اكتبي الاسم صح الأول 😄♥";
+
+        return;
+    }
+
+
+    document
+    .getElementById("loginScreen")
+    .style
+    .display="none";
+
+
+    document
+    .getElementById("website")
+    .style
+    .display="block";
+
+
+    /*
+       تشغيل الأغنية بعد الضغط
+       على زر البداية.
+    */
+
+    firstSong
+    .play()
+    .catch(function(){
+
+        console.log(
+            "المتصفح منع التشغيل التلقائي."
+        );
+
+    });
+
+}
+
+
+/* Enter */
+
+document
+.getElementById("nameInput")
+.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Enter"){
+
+            startWebsite();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   النصوص
+====================================================== */
+
+const texts = {
+
+love:{
+
+title:
+"بحبك أوي أوي ♥",
+
+text:
+`أنا بحبك أوي يا توتو 🥹♥️
+
+حياتي اتغيرت من ساعة ما بقيتي معايا
+وبقيتي أحلى حاجة في حياتي ويومي
+وفي كل حاجة ليا.
+
+إنتِ دنيتي وأملي وحياتي
+وتاج راسي ونور عيني
+ورفيقة حياتي وشريكتي.
+
+بحبببك أوي أوي أوي ♥`
+
+},
+
+
+important:{
+
+title:
+"إنتِ غالية عندي جدًا ∞",
+
+text:
+`إنتِ مش مجرد حد موجود في حياتي.
+
+إنتِ حد وجوده فرق معايا.
+
+وعشان كده مهما حاولت أوصف مكانتك
+هفضل شايف إن الكلام قليل. ♥`
+
+},
+
+
+secret:{
+
+title:
+"سر صغير 🔐",
+
+text:
+`كل مرة أشوف حاجة حلوة
+بتفكرني بيكي.
+
+وأقول في نفسي:
+
+دي لازم تتحط في الحكاية. ♥`
+
+},
+
+
+letter:{
+
+title:
+"جواب ليكي 💌",
+
+text:
+`يا شذا،
+
+مش عايز الكلام هنا يكون مجرد كلام حلو.
+
+عايزه يبقى ذكرى.
+
+كل صورة،
+كل أغنية،
+وكل فيديو هنا
+جزء صغير من الحكاية.
+
+والحكاية لسه في أولها. ♥`
+
+}
+
+};
+
+
+/* =====================================================
+   عرض النص
+====================================================== */
+
+function showText(type){
+
+    const item =
+    texts[type];
+
+
+    document
+    .getElementById("modalContent")
+    .innerHTML = `
+
+        <h2>
+        ${item.title}
+        </h2>
+
+        <div class="text">
+        ${item.text}
+        </div>
+
+    `;
+
+
+    openModal();
+
+}
+
+
+/* =====================================================
+   الفيديوهات
+====================================================== */
+
+function showVideos(){
+
+    document
+    .getElementById("modalContent")
+    .innerHTML = `
+
+<h2>
+😂 تيك توك علي الله حكايته
+</h2>
+
+<p style="
+line-height:2;
+color:#d7c7ce;
+margin-bottom:20px;
+">
+
+الفيديوهات بتاعتنا ♥️
+
+</p>
+
+
+<div class="mediaGrid">
+
+
+<div class="mediaCard">
+
+<video
+    controls
+    playsinline
+    preload="metadata"
+>
+
+<source
+    src="video%201.mp4"
+    type="video/mp4"
+>
+
+المتصفح لا يدعم تشغيل الفيديو.
+
+</video>
+
+<p>
+🎬 فيديو 1
+</p>
+
+</div>
+
+
+
+<div class="mediaCard">
+
+<video
+    controls
+    playsinline
+    preload="metadata"
+>
+
+<source
+    src="video%202.mp4"
+    type="video/mp4"
+>
+
+المتصفح لا يدعم تشغيل الفيديو.
+
+</video>
+
+<p>
+🎬 فيديو 2
+</p>
+
+</div>
+
+
+</div>
+
+`;
+
+    openModal();
+
+}
+
+
+/* =====================================================
+   الصور
+====================================================== */
+
+function showPhotos(){
+
+    document
+    .getElementById("modalContent")
+    .innerHTML = `
+
+<h2>
+🖼️ ألبوم الصور
+</h2>
+
+
+<div class="mediaGrid">
+
+
+<div class="mediaCard">
+
+<img
+    src="photo1.JPG"
+    alt="صورة 1"
+>
+
+<p>
+♥ ذكرى جميلة
+</p>
+
+</div>
+
+
+
+<div class="mediaCard">
+
+<img
+    src="photo2.JPG"
+    alt="صورة 2"
+>
+
+<p>
+♥ ذكرى جميلة
+</p>
+
+</div>
+
+
+</div>
+
+`;
+
+    openModal();
+
+}
+
+
+/* =====================================================
+   الأغاني
+====================================================== */
+
+function showMusic(){
+
+    document
+    .getElementById("modalContent")
+    .innerHTML = `
+
+<h2>
+🎵 أول الحكايات
+</h2>
+
+
+<div class="musicList">
+
+
+<div class="musicCard">
+
+<b>
+🎵 أغنية 1
+</b>
+
+<audio controls>
+
+<source
+    src="song1.mp3"
+    type="audio/mpeg"
+>
+
+</audio>
+
+</div>
+
+
+
+<div class="musicCard">
+
+<b>
+🎵 أغنية 2
+</b>
+
+<audio controls>
+
+<source
+    src="song2%20.mp3"
+    type="audio/mpeg"
+>
+
+</audio>
+
+</div>
+
+
+
+<div class="musicCard">
+
+<b>
+🎵 أغنية 3
+</b>
+
+<audio controls>
+
+<source
+    src="song3.mp3"
+    type="audio/mpeg"
+>
+
+</audio>
+
+</div>
+
+
+
+<div class="musicCard">
+
+<b>
+🎵 أغنية 4
+</b>
+
+<audio controls>
+
+<source
+    src="song4.mp3"
+    type="audio/mpeg"
+>
+
+</audio>
+
+</div>
+
+
+
+<div class="musicCard">
+
+<b>
+🎵 أغنية 5
+</b>
+
+<audio controls>
+
+<source
+    src="song5.mp3"
+    type="audio/mpeg"
+>
+
+</audio>
+
+</div>
+
+
+</div>
+
+`;
+
+    openModal();
+
+}
+
+
+/* =====================================================
+   فتح وإغلاق النافذة
+====================================================== */
+
+function openModal(){
+
+    document
+    .getElementById("modal")
+    .classList
+    .remove("hidden");
+
+}
+
+
+function closeModal(){
+
+    const modal =
+    document
+    .getElementById("modal");
+
+
+    modal
+    .classList
+    .add("hidden");
+
+
+    /*
+       إيقاف الفيديوهات والأغاني
+       عند إغلاق النافذة.
+    */
+
+    modal
+    .querySelectorAll("video,audio")
+    .forEach(
+        function(media){
+
+            media.pause();
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   اللعبة
+====================================================== */
+
+const questions = [
+
+{
+
+question:
+"إيه أكتر حاجة مهمة في أي علاقة؟",
+
+answers:[
+"الاهتمام",
+"الفهم",
+"الضحك",
+"كل دول ♥"
+]
+
+},
+
+{
+
+question:
+"إيه أحلى نوع مفاجآت؟",
+
+answers:[
+"رسالة",
+"صورة",
+"خروجة",
+"حاجة بسيطة من القلب"
+]
+
+},
+
+{
+
+question:
+"لو عندنا يوم فاضي نعمل إيه؟",
+
+answers:[
+"نتكلم كتير",
+"نضحك",
+"نتصور",
+"أي حاجة طالما اليوم حلو"
+]
+
+},
+
+{
+
+question:
+"مين كسب اللعبة؟",
+
+answers:[
+"Sabry",
+"Shaza",
+"الاتنين",
+"الحب ♥"
+]
+
+}
+
+];
+
+
+let currentQuestion = 0;
+
+let score = 0;
+
+
+function startGame(){
+
+    currentQuestion = 0;
+
+    score = 0;
+
+    showQuestion();
+
+    openModal();
+
+}
+
+
+function showQuestion(){
+
+    if(
+        currentQuestion >=
+        questions.length
+    ){
+
+        document
+        .getElementById("modalContent")
+        .innerHTML = `
+
+        <h2>
+        🏆 خلصت اللعبة!
+        </h2>
+
+        <p style="
+        text-align:center;
+        font-size:24px;
+        margin-top:20px;
+        ">
+
+        النتيجة:
+
+        ${score}
+
+        /
+
+        ${questions.length}
+
+        ♥
+
+        </p>
+
+        `;
+
+        return;
+    }
+
+
+    const q =
+    questions[currentQuestion];
+
+
+    document
+    .getElementById("modalContent")
+    .innerHTML = `
+
+    <h2>
+
+    السؤال
+    ${currentQuestion + 1}
+    من
+    ${questions.length}
+
+    </h2>
+
+
+    <p style="
+    margin:15px 0;
+    line-height:2;
+    ">
+
+    ${q.question}
+
+    </p>
+
+
+    <div class="answers">
+
+    ${q.answers
+    .map(
+        function(answer,index){
+
+            return `
+
+            <button
+            class="answerButton"
+            onclick="answerQuestion(${index})"
+            >
+
+            ${answer}
+
+            </button>
+
+            `;
+
+        }
+    )
+    .join("")}
+
+    </div>
+
+    `;
+
+}
+
+
+function answerQuestion(index){
+
+    /*
+       الإجابة الأخيرة هي
+       الإجابة المرحة الصحيحة.
+    */
+
+    if(index === 3){
+
+        score++;
+
+    }
+
+    currentQuestion++;
+
+    showQuestion();
+
+}
+
+</script>
+
+</body>
+
+</html>
